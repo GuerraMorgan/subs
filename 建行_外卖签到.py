@@ -17,10 +17,10 @@ import time
 from urllib.parse import quote
 import requests
 
-mid = '165'  # 有问题，请求头这里改成自己的
+mid = '168'  # 有问题，请求头这里改成自己的
 
 reward_type = '外卖'  # 奖励类型  外卖  或者  出行
-Flag = 0  # 外卖类型，1为信用卡专属,0普通用户
+Flag = 1  # 外卖类型，1为信用卡专属,0普通用户
 Break = 0  # 0正常领取， 1签到三天断签一天，2继续签到并且第七天领取打车券 (普通用户可选)
 
 
@@ -93,14 +93,14 @@ class CCD:
                 'Host': 'yunbusiness.ccb.com',
                 'zipversion': '1.0',
                 'accept': 'application/json',
-                'deviceid': 'deviceid',
-                'mid': mid,
-                'appversion': '2.1.3.001',
+                'deviceid': self.deviceid,
+                'mid': self.mid,
+                'appversion': '2.1.7.001',
                 'devicetype': 'Android',
                 'channel_num': '2',
-                'mbc-user-agent': f'MBCLOUDCCB/Android/Android 13/2.13/2.00/{self.deviceid}/chinamworld/1080*2316/',
+                'mbc-user-agent': f'MBCLOUDCCB/Android/Android 14/2.17/2.00/{self.deviceid}/Decrypt-UTF8/1096*2497/',
                 'Cookie': f'SESSION={session_value}',
-                'User-Agent': 'Apifox/1.0.0 (https://apifox.com)',
+                'User-Agent': 'okhttp/3.10.0',
                 'content-type': 'application/json; charset=utf-8',
                 'Connection': 'keep-alive'
             }
