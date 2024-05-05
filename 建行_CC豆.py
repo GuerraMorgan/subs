@@ -268,10 +268,10 @@ class CCD:
             self.activation_medal()
             self.getlist()
             self.answer_state()
-            print('\n======== 专区任务 ========')
-            time.sleep(random.randint(3, 5))
-            self.get_csrftoken()
-            self.sleep()
+            #print('\n======== 专区任务 ========')
+            #time.sleep(random.randint(3, 5))
+            #self.get_csrftoken()
+            #self.sleep()
             self.get_user_ccd()
 
     # 查询用户等级
