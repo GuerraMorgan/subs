@@ -94,7 +94,7 @@ class CCD:
                 'zipversion': '1.0',
                 'accept': 'application/json',
                 'deviceid': self.deviceid,
-                'mid': self.mid,
+                'mid': mid,
                 'appversion': '2.1.7.001',
                 'devicetype': 'Android',
                 'channel_num': '2',
